@@ -2,14 +2,14 @@
 "Normalize"
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     margin: 4px;
     background-color: lightgray;
     border: 1px solid gray;
@@ -22,13 +22,15 @@ body{
 
 /*
 
+Mobile Layout
+
 ---> Header 
 >bar and pokeball logo
 
 */
 
-.header-bar{
-    display:flex;
+.header-bar {
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 32px;
@@ -36,18 +38,21 @@ body{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.fig-logo{
+
+.fig-logo {
     width: 24px;
     height: 24px;
 }
-.img-logo{
+
+.img-logo {
     width: 100%;
     height: 100%;
     color: aliceblue;
     filter: invert(95%);
     border-radius: 50%;
 }
-.main-title{
+
+.main-title {
     color: aliceblue;
     margin-left: 8px;
     font-size: 14px;
@@ -61,23 +66,21 @@ body{
 > Pokemon profile
 
 */
-.pokemon-card{
-    background-color: silver;
+.pokemon-card {
+    background-color: rgb(160, 160, 160);
     padding: 16px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: space-between;
-    width: 100%;
 }
-.pokemon-profile{
+
+.pokemon-profile {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.card-title{
+
+.card-title {
+    max-width: 448px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,32 +89,37 @@ body{
     height: 38px;
     width: 100%;
 }
-.fig-type-icon{
+
+.fig-type-icon {
     width: 32px;
     height: 32px;
 }
-.img-type-icon{
+
+.img-type-icon {
     width: 100%;
     height: 100%;
-    filter: invert(25%);
+    filter: invert(45%);
 }
-.pokemon-name{
+
+.pokemon-name {
     font-size: 22px;
     color: rgb(40, 40, 40);
     text-align: center;
     display: block;
     margin: 0 14px;
 }
-.fig-sprite{
+
+.fig-sprite {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 16px 0;
 }
-.img-sprite{
-    height: 200px;
+
+.img-sprite {
+    height: 144px;
     width: 200px;
-    margin-top: -44px;
     filter: grayscale(100%);
     filter: contrast(0%);
     filter: brightness(0%);
@@ -122,33 +130,35 @@ body{
 > Stats list
 
 */
-.pokemon-stats{
+.pokemon-stats {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: -60px;
     padding: 56px 16px 16px 32px;
     width: 100%;
     background-color: aliceblue;
     border-radius: 10px;
 }
-.stats-list{
+
+.stats-list {
     width: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
 }
-.item{
+
+.item {
     width: 100%;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.item-title{
+
+.item-title {
     color: rgb(60, 60, 60);
 }
-.item-content{
+
+.item-content {
     color: rgb(60, 60, 60);
     width: 40%;
 }
@@ -160,17 +170,18 @@ body{
 Buttons list
 
 */
-
-.others{
+.others {
     color: rgb(60, 60, 60);
     background-color: aliceblue;
 }
-.others-title{
+
+.others-title {
     display: block;
     text-align: center;
     padding: 10px 0;
 }
-.others-grid{
+
+.others-grid {
     display: grid;
     grid-template-columns: fit-content(50vw) fit-content(50vw);
     justify-content: center;
@@ -179,18 +190,143 @@ Buttons list
     border-bottom-right-radius: 10px;
     padding-bottom: 16px;
 }
-.fig-other{
+
+.fig-other {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:48px;
-    height:48px;
-    background-color: silver;
-    border-radius: 8px;
+    width: 48px;
+    height: 48px;
 }
-.img-other{
+.btn-others {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: silver;
+    border-radius: 10px;
+}
+.img-other {
     width: 80%;
     filter: grayscale(100%);
     filter: contrast(0%);
     filter: brightness(0%);
+}
+
+/*
+Desktop Layout
+
+*/
+@media screen and (min-width: 680px) {
+
+    /*
+    "Fixed" the header bar to left
+    */
+
+    .header-bar {
+        justify-content: flex-start;
+        padding-left: 32px;
+    }
+
+    /*
+    Change the main display to create two columns
+    and adjust the size of the main img and the text
+    */
+    .pokemon-card {
+        padding-top: 32px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px;
+        padding-bottom: 32px;
+    }
+
+    .pokemon-profile {
+        max-width: 544px;
+    }
+
+    .card-title {
+        align-self: center;
+    }
+
+    .fig-sprite {
+        justify-content: center;
+    }
+
+    .img-sprite {
+        width: 344px;
+        height: 264px;
+        margin-top: 24px;
+    }
+
+    .pokemon-stats {
+        max-width: 352px;
+        margin: 0px;
+        padding: 72px 0px 56px 0px;
+    }
+
+    .stats-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 50%);
+        row-gap: 32px;
+    }
+
+    .item {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 56px;
+    }
+
+    .item-title {
+        font-size: smaller;
+    }
+
+    .item-content {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    /*
+    Display the footer in a row
+    and adjust the size of the buttons
+    */
+    .others {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 112px;
+        padding-left: 16px;
+    }
+
+    .others-title {
+        font-size: medium;
+    }
+
+    .others-grid {
+        background-color: aliceblue;
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        padding-bottom: 0;
+        margin: 24px;
+        gap: 64px;
+    }
+
+    .fig-other {
+        width: 64px;
+        height: 64px;
+    }
+
+    .btn-others {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: silver;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .btn-others:hover {
+        background-color: rgb(160, 160, 160);
+    }
 }

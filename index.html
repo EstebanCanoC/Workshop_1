@@ -5,53 +5,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 
 <body>
-    <header>
+    <header class="header-bar">
         <figure class="fig-logo">
-            <img src="./pokeball-logo.png" alt="" class="logo">
+            <img src="./Assets/Pokeball-icon.png" alt="" class="img-logo">
         </figure>
-        <h1>POKEDEX</h1>
+        <h1 class="main-title">POKEDEX_</h1>
     </header>
     <main>
         <section class="pokemon-card">
             <article class="pokemon-profile">
-                <h2 class="pokemon-name">
-                    CHARIZARD
-                </h2>
+                <div class="card-title">
+                    <figure class="fig-type-icon">
+                        <img src="./Assets/Type-fire.png" alt="" class="img-type-icon">
+                    </figure>
+                    <h2 class="pokemon-name">
+                        CHARIZARD
+                    </h2>
+                </div>
                 <figure class="fig-sprite">
-                    <img src="" alt="" class="sprite">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/6.png"
+                        alt="" class="img-sprite">
                 </figure>
             </article>
             <article class="pokemon-stats">
-                <table class="table-stats">
-                    <tr>
-                        <th>NO</th>
-                        <th>LEVEL</th>
-                        <th>TYPE</th>
-                        <th>HABILITY</th>
-                        <th>HEIGHT</th>
-                        <th>WEIGHT</th>
-                    </tr>
-                    <tr>
-                        <td>006</td>
-                        <td>LEVEL</td>
-                        <td>FIRE</td>
-                        <td>FLAMES</td>
-                        <td>1.7 m</td>
-                        <td>90.5 Kg</td>
-                    </tr>
-                </table>
+                <ul class="stats-list">
+                    <li class="item">
+                        <p class="item-title">
+                            NO
+                        </p>
+                        <p class="item-content">
+                            006
+                        </p>
+                    </li>
+                    <li class="item">
+                        <p class="item-title">
+                            LEVEL
+                        </p>
+                        <p class="item-content">
+                            100
+                        </p>
+                    </li>
+                    <li class="item">
+                        <p class="item-title">
+                            TYPE
+                        </p>
+                        <p class="item-content">
+                            FIRE
+                        </p>
+                    </li>
+                    <li class="item">
+                        <p class="item-title">
+                            HABILITY
+                        </p>
+                        <p class="item-content">
+                            FLAMES
+                        </p>
+                    </li>
+                    <li class="item">
+                        <p class="item-title">
+                            HEIGHT
+                        </p>
+                        <p class="item-content">
+                            1.7 m
+                        </p>
+                    </li>
+                    <li class="item">
+                        <p class="item-title">
+                            WEIGHT
+                        </p>
+                        <p class="item-content">
+                            90.5 Kg
+                        </p>
+                    </li>
+                </ul>
             </article>
         </section>
         <footer>
             <section class="others">
                 <p>OTHERS</p>
-                <figure class="fig-others">
-                    <img src="" alt="" class="other-1">
-                </figure>
+                <article class="others-grid">
+                    <figure class="fig-other">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+                            alt="" class="img-other">
+                    </figure>
+                    <figure class="fig-other">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+                            alt="" class="img-other">
+                    </figure>
+                    <figure class="fig-other">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+                            alt="" class="img-other">
+                    </figure>
+                    <figure class="fig-other">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+                            alt="" class="img-other">
+                    </figure>
+                </article>
             </section>
         </footer>
     </main>

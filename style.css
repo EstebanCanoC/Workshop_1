@@ -1,3 +1,7 @@
+/*
+"Normalize"
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +19,13 @@ body{
     border-bottom-right-radius: 8px;*/
     border-radius: 10px;
 }
+
+/*
+
+---> Header 
+>bar and pokeball logo
+
+*/
 
 .header-bar{
     display:flex;
@@ -41,6 +52,15 @@ body{
     margin-left: 8px;
     font-size: 14px;
 }
+
+/* 
+
+---> Main 
+> Cards
+> Card 1/2
+> Pokemon profile
+
+*/
 .pokemon-card{
     background-color: silver;
     padding: 16px 32px;
@@ -57,7 +77,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 .card-title{
     display: flex;
     align-items: center;
@@ -76,7 +95,6 @@ body{
     height: 100%;
     filter: invert(25%);
 }
-
 .pokemon-name{
     font-size: 22px;
     color: rgb(40, 40, 40);
@@ -99,6 +117,11 @@ body{
     filter: brightness(0%);
 }
 
+/* 
+> Card 2/2
+> Stats list
+
+*/
 .pokemon-stats{
     display: flex;
     flex-direction: column;
@@ -129,6 +152,14 @@ body{
     color: rgb(60, 60, 60);
     width: 40%;
 }
+
+/* 
+
+---> Footer 
+
+Buttons list
+
+*/
 
 .others{
     color: rgb(60, 60, 60);
